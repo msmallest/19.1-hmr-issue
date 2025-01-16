@@ -1,4 +1,4 @@
-import { Component, signal, VERSION } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { JsonPipe } from '@angular/common';
 import { ExteriorTemplateComponent } from './app/exterior-template.component';
@@ -6,11 +6,13 @@ import { ExteriorTemplateComponent } from './app/exterior-template.component';
 @Component({
   selector: 'app-root',
   template: `
-    <p id="one">Chandasdage this</p>
+    <p id="one">Change this</p>
 
     <p id="two">Also change this</p>
 
-    <p>Change the text inside this to fix the styles</p>
+    <!-- When styles break, add a character, like 'd', and styles are fixed -->
+
+    <p>Node without a style - changes to this still break styles.</p>
 
     <app-exterior-template />
 
